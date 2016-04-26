@@ -13,6 +13,7 @@
 
 import numpy as Math
 import pylab as Plot
+from matplotlib.pyplot import savefig
 
 def Hbeta(D = Math.array([]), beta = 1.0):
     """Compute the perplexity and the P-row for a specific value of the precision of a Gaussian distribution."""
@@ -169,8 +170,10 @@ if __name__ == "__main__":
     print "Running example on 2,500 MNIST digits..."
 #    X = Math.loadtxt("mnist2500_X.txt");
 #    labels = Math.loadtxt("mnist2500_labels.txt");
-    X = Math.loadtxt("pixels_X.txt");
-    labels = Math.loadtxt("pixels_labels.txt");
+    X = Math.loadtxt("data/pixels_X.txt");
+    labels = Math.loadtxt("data/pixels_labels.txt");
     Y = tsne(X, 2, 50, 20.0);
     Plot.scatter(Y[:,0], Y[:,1], 20, labels);
-    Plot.show();
+#    Plot.show();
+    savefig('foo.png')
+    savefig('foo.pdf')
