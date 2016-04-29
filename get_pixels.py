@@ -6,9 +6,9 @@ import os
 import json
 import sys
 
-label = sys.argv[1] 
-src_dir = "/some/jpg/path"
-
+label = sys.argv[1] # e.g. c0, c1, ...
+src_dir = "/home/andyandy/data/kaggle/state-farm/train/{}".format(label)
+#src_dir = "/home/andyandy/Desktop/state-farm/imgs/train/{}".format(label)
 
 RGB = False
 

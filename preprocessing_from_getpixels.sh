@@ -1,10 +1,13 @@
 #!/bin/bash
 
-# cat pixels_X.txt | sed "s:\]:\n:g" | wc -l
-sed -i "s:\]:\n:g" pixels_X.txt
-# cat pixels_X.txt | sed "s:\[::g" | wc -l
-sed -i "s:\[::g" pixels_X.txt
-sed -i "s:\,::g" pixels_X.txt
+file=$1
+echo "Running $file"
+# cat $file | sed "s:\]:\n:g" | wc -l
+sed -i "s:\]::g" $file
+# cat $file | sed "s:\[::g" | wc -l
+sed -i "s:\[::g" $file
+sed -i "s:\,::g" $file
 
-# wc -l pixels_X.txt
-# cat pixels_X.txt | while read line; do echo $line | wc -w; done
+# wc -l $file
+# cat $file | while read line; do echo $line | wc -w; done
+
